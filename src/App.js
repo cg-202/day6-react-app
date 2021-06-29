@@ -1,28 +1,23 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { useState } from "react";
 
 // SPECAIL IN THE WORLD OF REACT FAMILY
 const App = () => {
-  let counter = 100;
-  let username = "Capgemini";
-  let list = ["Delhi", "Kolkata", "Mumbai", "Chennai", "KASHMIR", "raipur"];
+  // let counter = 100;
+  let [counter, setCounter] = useState(100);
+
+  const increment = () => {
+    // counter += 1;
+    setCounter(counter + 1);
+    console.log("I AM INCREMENT FUNCTION", counter);
+  };
 
   return (
     <div>
-      <h1>Hello World</h1>
-      <h1>{username}</h1>
-      <h1>{counter}</h1>
-
-      <h1>Dynamic Web Site</h1>
-      {list.map((item) => (
-        <h3>{item}</h3>
-      ))}
-
-      <h1>Static Web Stite </h1>
-      <h3>Delhi</h3>
-      <h3>Kolkata</h3>
-      <h3>Mumbai</h3>
-      <h3>Chennai</h3>
+      <h1>Event Demo</h1>
+      <h3>{counter}</h3>
+      <input type="button" value="INCREMENT" onClick={increment} />
     </div>
   );
 };
