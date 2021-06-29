@@ -3,12 +3,16 @@ import "./App.css";
 
 // SPECAIL IN THE WORLD OF REACT FAMILY
 const App = () => {
-  // Function that resturn JSX / HTML TAG
-  return <h1>Hello World React!!!</h1>;
-};
+  let counter = 100;
+  let username = "Capgemini";
 
-const sum = (n1, n2) => {
-  return n1 + n2;
+  return (
+    <div>
+      <h1>Hello World</h1>
+      <h1>{username}</h1>
+      <h1>{counter}</h1>
+    </div>
+  );
 };
 
 export default App;
