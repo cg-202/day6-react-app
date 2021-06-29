@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Event Demo</h1>
+      <h1>Counter Demo</h1>
       <h3>{counter}</h3>
       <input type="button" value="INCREMENT" onClick={increment} />
     </div>
